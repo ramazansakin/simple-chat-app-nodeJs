@@ -13,7 +13,12 @@ const locationMessageTemplate = document.querySelector('#location-message-templa
 const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML
 
 // Options
-const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
+const {
+    username,
+    room
+} = Qs.parse(location.search, {
+    ignoreQueryPrefix: true
+})
 
 const autoscroll = () => {
     // New message element
@@ -60,7 +65,10 @@ socket.on('locationMessage', (message) => {
     autoscroll()
 })
 
-socket.on('roomData', ({ room, users }) => {
+socket.on('roomData', ({
+    room,
+    users
+}) => {
     const html = Mustache.render(sidebarTemplate, {
         room,
         users
@@ -101,12 +109,15 @@ $sendLocationButton.addEventListener('click', () => {
             longitude: position.coords.longitude
         }, () => {
             $sendLocationButton.removeAttribute('disabled')
-            console.log('Location shared!')  
+            console.log('Location shared!')
         })
     })
 })
 
-socket.emit('join', { username, room }, (error) => {
+socket.emit('join', {
+    username,
+    room
+}, (error) => {
     if (error) {
         alert(error)
         location.href = '/'
