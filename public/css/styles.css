@@ -1,5 +1,4 @@
 /* General Styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +21,7 @@ body {
 
 h1 {
     margin-bottom: 16px;
+    text-align: center;
 }
 
 label {
@@ -32,7 +32,7 @@ label {
 }
 
 input {
-    border: 1px solid #eeeeee;
+    border: 1px solid #a08282;
     padding: 12px;
     outline: none;
 }
@@ -41,7 +41,7 @@ button {
     cursor: pointer;
     padding: 12px;
     background: #7C5CBF;
-    border: none;
+    border: thin;
     color: white;
     font-size: 16px;
     transition: background .3s ease;
@@ -57,7 +57,6 @@ button:disabled {
 }
 
 /* Join Page Styles */
-
 .centered-form {
     background: #333744;
     width: 100vw;
@@ -71,7 +70,7 @@ button:disabled {
     box-shadow: 0px 0px 17px 1px #1D1F26;
     background: #F7F7FA;
     padding: 24px;
-    width: 250px;
+    width: 350px;
 }
 
 .centered-form button {
@@ -84,7 +83,6 @@ button:disabled {
 }
 
 /* Chat Page Layout */
-
 .chat {
     display: flex;
 }
@@ -93,12 +91,11 @@ button:disabled {
     height: 100vh;
     color: white;
     background: #333744;
-    width: 225px;
+    width: 200px;
     overflow-y: scroll
 }
 
 /* Chat styles */
-
 .chat__main {
     flex-grow: 1;
     display: flex;
@@ -113,7 +110,6 @@ button:disabled {
 }
 
 /* Message Styles */
-
 .message {
     margin-bottom: 16px;
 }
@@ -134,7 +130,6 @@ button:disabled {
 }
 
 /* Message Composition Styles */
-
 .compose {
     display: flex;
     flex-shrink: 0;
@@ -161,7 +156,6 @@ button:disabled {
 }
 
 /* Chat Sidebar Styles */
-
 .room-title {
     font-weight: 400;
     font-size: 22px;
@@ -179,5 +173,9 @@ button:disabled {
 .users {
     list-style-type: none;
     font-weight: 300;
-    padding: 12px 24px 0 24px;
+    padding: 12px 20px 0 20px;
+}
+
+.users li {
+    margin-top: 5px;
 }
